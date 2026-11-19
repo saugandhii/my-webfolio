@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HeroPlaceholder from './components/HeroPlaceholder';
 import AboutMe from './components/AboutMe';
 import SkillStack from './components/SkillStack';
@@ -13,13 +13,17 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [selectedProjectId, setSelectedProjectId] = useState(null);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [activeTab]);
+
   const handleOpenProject = (projectId) => {
     setSelectedProjectId(projectId);
     setActiveTab('projects');
   };
 
   return (
-    <div className="relative min-h-screen text-[#4A2E2B] font-sans flex flex-col justify-between selection:bg-[#F7C8D1] selection:text-[#4A2E2B] bg-[#FFFDF6]">
+    <div className="relative min-h-screen text-[#4A2E2B] font-sans flex flex-col justify-between selection:bg-[#F7C8D1] selection:text-[#4A2E2B] bg-[#FFFDF6] overflow-x-hidden">
       {/* 
         FIXED DOTTED BACKGROUND CANVAS 
         - Stays 100% stationary as the user scrolls
@@ -34,16 +38,16 @@ export default function App() {
       />
 
       {/* HEADER / NAVIGATION */}
-      <header className="sticky top-0 z-50 bg-[#FFFDF6]/85 backdrop-blur-md border-b border-[#4A2E2B]/10 px-6 py-4">
-        <div className="max-w-5xl mx-auto flex items-center justify-between">
+      <header className="sticky top-0 z-50 bg-[#FFFDF6]/85 backdrop-blur-md border-b border-[#4A2E2B]/10 px-4 sm:px-6 py-3 sm:py-4">
+        <div className="max-w-5xl mx-auto flex items-center justify-between gap-2">
           <div 
-            className="flex items-center space-x-3 cursor-pointer" 
+            className="flex items-center space-x-3 cursor-pointer shrink-0" 
             onClick={() => {
               setActiveTab('home');
               setSelectedProjectId(null);
             }}
           >
-            <h1 className="font-bold text-[#4A2E2B] tracking-tight leading-none text-base">Portfolio.</h1>
+            <h1 className="font-bold text-[#4A2E2B] tracking-tight leading-none text-sm sm:text-base">Portfolio.</h1>
           </div>
 
           <nav className="flex items-center bg-[#FFFDF6]/90 p-1 rounded-full border border-[#4A2E2B]/10 shadow-2xs">
@@ -54,7 +58,7 @@ export default function App() {
                   setActiveTab(tab);
                   if (tab !== 'projects') setSelectedProjectId(null);
                 }}
-                className={`px-4 py-1.5 rounded-full text-xs font-semibold capitalize transition-all duration-200 ${
+                className={`px-2.5 sm:px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold capitalize transition-all duration-200 ${
                   activeTab === tab
                     ? 'bg-[#C23B58] text-[#FFFDF6] shadow-md shadow-[#C23B58]/20'
                     : 'text-[#4A2E2B]/70 hover:text-[#C23B58] hover:bg-[#C23B58]/10'
@@ -68,7 +72,7 @@ export default function App() {
       </header>
 
       {/* SCROLLABLE CONTENT CONTAINER (z-10 sits above fixed background) */}
-      <main className="relative z-10 max-w-5xl mx-auto px-6 py-12 flex-grow w-full">
+      <main className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 flex-grow w-full">
         {activeTab === 'home' && (
           <div className="space-y-16">
             <HeroPlaceholder />
@@ -99,7 +103,7 @@ export default function App() {
       </main>
 
       {/* FOOTER */}
-      <footer className="relative z-10 border-t border-[#4A2E2B]/10 bg-[#FFFDF6]/90 backdrop-blur-xs py-8 px-6 text-center text-xs text-[#4A2E2B]/60">
+      <footer className="relative z-10 border-t border-[#4A2E2B]/10 bg-[#FFFDF6]/90 backdrop-blur-xs py-8 px-4 sm:px-6 text-center text-xs text-[#4A2E2B]/60">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>© Built with React & Tailwind CSS</p>
           <div className="flex items-center space-x-6 text-[#4A2E2B]/80 font-medium">

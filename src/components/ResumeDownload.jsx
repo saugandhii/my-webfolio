@@ -34,12 +34,12 @@ export default function ResumeDownload() {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+        <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
           {/* English CV Buttons */}
-          <div className="flex items-center space-x-1 bg-[#C23B58] text-[#FFFDF6] p-1 rounded-full shadow-md shadow-[#C23B58]/20">
+          <div className="inline-flex items-center space-x-1 bg-[#C23B58] text-[#FFFDF6] p-1 rounded-full shadow-md shadow-[#C23B58]/20">
             <button
               onClick={() => setSelectedPdf('en')}
-              className="px-4 py-1.5 font-semibold text-xs rounded-full hover:bg-white/10 transition-colors"
+              className="px-4 py-1.5 font-semibold text-xs rounded-full hover:bg-white/10 transition-colors cursor-pointer"
             >
               English
             </button>
@@ -54,10 +54,10 @@ export default function ResumeDownload() {
           </div>
 
           {/* German CV Buttons */}
-          <div className="flex items-center space-x-1 bg-[#4A2E2B] text-[#FFFDF6] p-1 rounded-full shadow-md shadow-[#4A2E2B]/20">
+          <div className="inline-flex items-center space-x-1 bg-[#4A2E2B] text-[#FFFDF6] p-1 rounded-full shadow-md shadow-[#4A2E2B]/20">
             <button
               onClick={() => setSelectedPdf('de')}
-              className="px-4 py-1.5 font-semibold text-xs rounded-full hover:bg-white/10 transition-colors"
+              className="px-4 py-1.5 font-semibold text-xs rounded-full hover:bg-white/10 transition-colors cursor-pointer"
             >
               Deutsch
             </button>
@@ -95,7 +95,7 @@ export default function ResumeDownload() {
                 </a>
                 <button
                   onClick={() => setSelectedPdf(null)}
-                  className="w-8 h-8 rounded-full bg-[#4A2E2B]/10 hover:bg-[#4A2E2B]/20 text-[#4A2E2B] font-bold text-sm flex items-center justify-center transition-all"
+                  className="w-8 h-8 rounded-full bg-[#4A2E2B]/10 hover:bg-[#4A2E2B]/20 text-[#4A2E2B] font-bold text-sm flex items-center justify-center transition-all cursor-pointer"
                 >
                   ✕
                 </button>
