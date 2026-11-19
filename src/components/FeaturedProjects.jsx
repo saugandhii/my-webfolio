@@ -4,75 +4,101 @@ export default function FeaturedProjects({ onSelectProject, onSeeAllProjects }) 
   const featured = [
     {
       id: 'proj-1',
-      title: 'Computer Vision & Deep Learning Pipeline',
-      category: 'AI / Computer Vision',
-      tags: ['PyTorch', 'OpenCV', 'Python', 'CNNs']
+      code: '01',
+      title: 'Multimodal Vision-Language Search Engine',
+      category: 'Vector Search & Embeddings',
+      tags: ['PyTorch', 'FAISS', 'CLIP', 'FastAPI']
     },
     {
       id: 'proj-2',
-      title: 'Scalable MLOps & Model Deployment',
-      category: 'MLOps / Systems',
-      tags: ['Docker', 'FastAPI', 'Python', 'CI/CD']
+      code: '02',
+      title: 'Autonomous Mobile Robot (AMR) SLAM',
+      category: 'LiDAR & Path Planning',
+      tags: ['ROS2', 'C++', 'Python', 'EKF']
     },
     {
       id: 'proj-3',
-      title: 'Generative AI & LLM Fine-Tuning',
-      category: 'NLP / Generative AI',
-      tags: ['Transformers', 'LangChain', 'VectorDB', 'PyTorch']
+      code: '03',
+      title: 'LLM Fine-Tuning for Medical Summarization',
+      category: 'Domain Adaptation & PEFT',
+      tags: ['Hugging Face', 'LoRA', 'Unsloth', 'PyTorch']
     }
   ];
 
+  const handleCardClick = (id) => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    onSelectProject(id);
+  };
+
+  const handleSeeAllClick = () => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    onSeeAllProjects();
+  };
+
   return (
-    <section id="featured-projects" className="space-y-6">
+    <section id="featured-projects" className="w-full space-y-6 animate-fade-in">
       {/* Header Badge & Section Link */}
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <span className="text-xs font-mono font-bold tracking-wider text-[#C23B58] uppercase px-2.5 py-1 rounded-md bg-[#C23B58]/10 border border-[#C23B58]/20">
-            05 // FEATURED PROJECTS
+          <span className="text-base sm:text-lg font-mono font-bold tracking-wider text-[#C23B58] uppercase px-2.5 py-1 rounded-md bg-[#C23B58]/10 border border-[#C23B58]/20">
+            FEATURED PROJECTS
           </span>
         </div>
 
         <button
-          onClick={onSeeAllProjects}
-          className="text-xs font-bold text-[#C23B58] hover:underline flex items-center space-x-1"
+          type="button"
+          onClick={handleSeeAllClick}
+          className="text-xs font-mono font-bold text-[#C23B58] hover:underline flex items-center space-x-1.5 cursor-pointer"
         >
           <span>All Projects Tab</span>
           <span>→</span>
         </button>
       </div>
 
-      {/* Grid of 3 Minimal Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      {/* Grid of 3 Two-Color Lab-Note Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
         {featured.map((proj) => (
           <div
             key={proj.id}
-            onClick={() => onSelectProject(proj.id)}
-            className="bg-[#F7C8D1]/10 border border-[#4A2E2B]/10 rounded-2xl p-5 flex flex-col justify-between hover:border-[#C23B58]/50 hover:bg-[#F7C8D1]/20 transition-all duration-300 shadow-xs cursor-pointer group"
+            onClick={() => handleCardClick(proj.id)}
+            className="relative bg-[#4A2E2B]/[0.08] backdrop-blur-[2px] border border-[#C23B58]/30 hover:border-[#C23B58] rounded-3xl p-5 flex flex-col justify-between transition-all duration-300 cursor-pointer group"
           >
-            <div className="space-y-3">
-              <span className="text-[10px] font-mono font-bold tracking-wider text-[#C23B58] uppercase px-2 py-0.5 rounded-full bg-[#C23B58]/10">
-                {proj.category}
-              </span>
-              <h3 className="font-bold text-[#4A2E2B] text-base group-hover:text-[#C23B58] transition-colors leading-snug">
+            {/* Left Crimson Notebook Margin Line */}
+            <div className="absolute top-0 bottom-0 left-5 w-[1px] bg-[#C23B58]/35 pointer-events-none" />
+
+            <div className="pl-3.5 space-y-3">
+              {/* Index + Category Header */}
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-[10px] font-mono font-bold tracking-wider text-[#C23B58] uppercase">
+                  {proj.category}
+                </span>
+                <span className="text-[10px] font-mono font-bold text-[#C23B58]/70">
+                  {proj.code}
+                </span>
+              </div>
+
+              <h3 className="font-extrabold text-[#4A2E2B] text-base group-hover:text-[#C23B58] transition-colors leading-snug">
                 {proj.title}
               </h3>
             </div>
 
-            <div className="pt-6 space-y-3">
+            <div className="pl-3.5 pt-6 space-y-3.5">
+              {/* Tag Pills */}
               <div className="flex flex-wrap gap-1.5">
                 {proj.tags.map((tag, tIdx) => (
                   <span
                     key={tIdx}
-                    className="text-[10px] font-medium text-[#4A2E2B]/80 bg-[#FFFDF6] px-2 py-0.5 rounded-md border border-[#4A2E2B]/10"
+                    className="text-[10px] font-mono font-medium text-[#4A2E2B]/85 bg-[#4A2E2B]/[0.06] px-2 py-0.5 rounded-md border border-[#C23B58]/25"
                   >
                     #{tag}
                   </span>
                 ))}
               </div>
 
-              <div className="pt-2 border-t border-[#4A2E2B]/10 flex items-center justify-between text-xs font-bold text-[#C23B58] group-hover:translate-x-1 transition-transform">
-                <span>View Project</span>
-                <span>→</span>
+              {/* Footer Action */}
+              <div className="pt-2.5 border-t border-dashed border-[#C23B58]/30 flex items-center justify-between text-xs font-mono font-bold text-[#C23B58]">
+                <span>View Case Study</span>
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </div>
           </div>

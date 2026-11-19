@@ -20,19 +20,16 @@ export default function ResumeDownload() {
     <section id="resume" className="space-y-6">
       {/* Header Badge */}
       <div className="flex items-center space-x-2">
-        <span className="text-xs font-mono font-bold tracking-wider text-[#C23B58] uppercase px-2.5 py-1 rounded-md bg-[#C23B58]/10 border border-[#C23B58]/20">
-          04 // RESUME
+        <span className="text-lg font-mono font-bold tracking-wider text-[#C23B58] uppercase px-2.5 py-1 rounded-md bg-[#C23B58]/10 border border-[#C23B58]/20">
+          RESUME
         </span>
       </div>
 
       {/* Main Card */}
       <div className="bg-[#F7C8D1]/10 border border-[#4A2E2B]/10 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xs">
         <div className="space-y-2 max-w-xl">
-          <h2 className="text-xl sm:text-2xl font-extrabold text-[#4A2E2B] tracking-tight">
-            Resume
-          </h2>
           <p className="text-xs sm:text-sm text-[#4A2E2B]/75 leading-relaxed">
-            Preview my formal academic and professional resume in-browser or download a PDF copy in English or German.
+            Get my resume in your preferred language. Click the buttons to preview or download the PDF version.
           </p>
         </div>
 
@@ -44,7 +41,7 @@ export default function ResumeDownload() {
               onClick={() => setSelectedPdf('en')}
               className="px-4 py-1.5 font-semibold text-xs rounded-full hover:bg-white/10 transition-colors"
             >
-              Resume EN
+              English
             </button>
             <a
               href="/resume-en.pdf"
@@ -62,7 +59,7 @@ export default function ResumeDownload() {
               onClick={() => setSelectedPdf('de')}
               className="px-4 py-1.5 font-semibold text-xs rounded-full hover:bg-white/10 transition-colors"
             >
-              Resume DE
+              Deutsch
             </button>
             <a
               href="/resume-de.pdf"

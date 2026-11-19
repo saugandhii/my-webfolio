@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 export default function SkillStack() {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(null);
 
   const cakeLayers = [
     {
       id: 'ai',
-      layerNumber: 'LAYER 01',
+      layerNumber: '01',
       title: 'AI & Machine Learning',
       subtitle: 'Core models, neural architectures & optimization',
       bgColor: 'bg-[#C23B58]',
@@ -17,7 +17,7 @@ export default function SkillStack() {
     },
     {
       id: 'eng',
-      layerNumber: 'LAYER 02',
+      layerNumber: '02',
       title: 'Software & Web Engineering',
       subtitle: 'Languages, developer tools & system pipelines',
       bgColor: 'bg-[#A2DD97]',
@@ -28,7 +28,7 @@ export default function SkillStack() {
     },
     {
       id: 'soft',
-      layerNumber: 'LAYER 03',
+      layerNumber: '03',
       title: 'Soft Skills & Leadership',
       subtitle: 'Collaboration & analytical execution strengths',
       bgColor: 'bg-[#F7C8D1]',
@@ -39,16 +39,16 @@ export default function SkillStack() {
     },
     {
       id: 'lang',
-      layerNumber: 'LAYER 04',
+      layerNumber: '04',
       title: 'Languages Spoken',
       subtitle: 'Linguistic competence for international environments',
       bgColor: 'bg-[#4A2E2B]',
       textColor: 'text-[#FFFDF6]',
       accentColor: 'bg-[#FFFDF6]/20 text-[#FFFDF6]',
       languages: [
-        { name: 'English', level: 'Full Professional / Academic C1+' },
-        { name: 'German', level: 'Intermediate / Daily Conversational' },
-        { name: 'Nepali / Hindi', level: 'Native / Bilingual' }
+        { name: 'English', level: 'Full Professional / Academic C1' },
+        { name: 'German', level: 'Beginner' },
+        { name: 'Hindi', level: 'Native / Bilingual' }
       ],
       isLanguage: true
     }
@@ -61,18 +61,9 @@ export default function SkillStack() {
   return (
     <section id="skills" className="space-y-6">
       <div className="flex items-center space-x-2">
-        <span className="text-xs font-mono font-bold tracking-wider text-[#C23B58] uppercase px-2.5 py-1 rounded-md bg-[#C23B58]/10 border border-[#C23B58]/20">
-          02 // SKILL STACK
+        <span className="text-lg font-mono font-bold tracking-wider text-[#C23B58] uppercase px-2.5 py-1 rounded-md bg-[#C23B58]/10 border border-[#C23B58]/20">
+          SKILL STACK
         </span>
-      </div>
-
-      <div>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-[#4A2E2B] leading-tight tracking-tight">
-          Skill Stack
-        </h2>
-        <p className="text-sm text-[#4A2E2B]/70 mt-1">
-          Click on any layer of the stack to slice into specific frameworks and competencies.
-        </p>
       </div>
 
       <div className="space-y-3 pt-2 max-w-3xl mx-auto">

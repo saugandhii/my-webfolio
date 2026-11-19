@@ -11,117 +11,164 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="space-y-8 animate-fade-in">
-
-      {/* Headline & Subtitle */}
-      <div className="max-w-2xl space-y-2">
+    <section
+      id="contact"
+      className="bg-dotted-page py-10 px-4 sm:px-8 space-y-8 sm:space-y-10 animate-fade-in relative rounded-3xl border border-[#4A2E2B]/10 my-4"
+    >
+      {/* Centered Header */}
+      <div className="text-center max-w-xl mx-auto space-y-2">
         <h2 className="text-2xl sm:text-3xl font-extrabold text-[#4A2E2B] leading-tight tracking-tight">
-          Let's Get in Touch !!
+          Let&apos;s Get in Touch
         </h2>
-        <p className="text-sm text-[#4A2E2B]/75 leading-relaxed">
-          I am always open to discussing academic research, AI engineering opportunities, and working student roles (*Werkstudent*) in Germany.
-        </p>
       </div>
 
-      {/* Main Grid: Direct Connect & Work Status */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Main Grid: Translucent Kraft Brown 2-Card Layout */}
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-2">
 
-        {/* LEFT CARD: Direct Actions */}
-        <div className="bg-[#F7C8D1]/10 border border-[#4A2E2B]/10 rounded-3xl p-6 sm:p-8 space-y-6 flex flex-col justify-between">
-          <div className="space-y-4">
-            {/* Status Badge */}
-            <div className="inline-flex items-center space-x-2 bg-[#A2DD97]/20 border border-[#A2DD97]/50 px-3 py-1 rounded-full">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A2DD97] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#6DBE5A]"></span>
+        {/* LEFT CARD: Direct Contact */}
+        <article className="relative bg-[#4A2E2B]/[0.12] backdrop-blur-[2px] border-2 border-[#4A2E2B]/20 rounded-3xl p-6 sm:p-7 shadow-sm hover:border-[#C23B58]/50 transition-colors flex flex-col justify-between">
+          {/* Left Red Notebook Margin Line */}
+          <div className="absolute top-0 bottom-0 left-6 sm:left-7 w-[1px] bg-[#C23B58]/30 pointer-events-none" />
+
+          <div className="pl-4 sm:pl-5 space-y-5 relative z-10">
+            {/* Card Header */}
+            <div className="flex items-center justify-between border-b border-[#4A2E2B]/15 pb-2">
+              <span className="text-[11px] font-mono font-bold text-[#C23B58] uppercase tracking-wider">
+                01 // DIRECT REACH-OUT
               </span>
-              <span className="text-xs font-semibold text-[#4A2E2B]">
-                Active & Open for Opportunities
-              </span>
+              {/* Live Availability Pill */}
+              <div className="inline-flex items-center space-x-1.5 bg-[#FFFDF6]/85 border border-[#6DBE5A]/50 px-2.5 py-0.5 rounded-full">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A2DD97] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#6DBE5A]" />
+                </span>
+                <span className="text-[10px] font-bold text-[#4A2E2B]">
+                  Available
+                </span>
+              </div>
             </div>
 
-            <h3 className="text-xl font-bold text-[#4A2E2B]">Direct Contact</h3>
-            <p className="text-xs text-[#4A2E2B]/75 leading-relaxed">
-              Feel free to reach out directly via email or connect on social platforms.
-            </p>
+            {/* Title & Description */}
+            <div className="space-y-2">
+              <h3 className="font-extrabold text-[#4A2E2B] text-lg sm:text-xl leading-snug">
+                Start a Conversation
+              </h3>
+              <p className="text-sm text-[#4A2E2B]/85 leading-relaxed">
+                Whether you have an opening for a <em>Werkstudent</em> / HiWi researcher, an ML engineering project, or simply want to exchange notes on AI systems, feel free to write directly.
+              </p>
+            </div>
+
+            {/* Quick Metadata Block */}
+            <div className="pt-2 border-t border-dashed border-[#4A2E2B]/20 space-y-1.5 text-xs text-[#4A2E2B]/85">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-[11px] text-[#4A2E2B]/65 uppercase">Email</span>
+                <span className="font-semibold text-[#4A2E2B] select-all">{emailAddress}</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-[11px] text-[#4A2E2B]/65 uppercase">Response Time</span>
+                <span className="font-medium text-[#4A2E2B]/90">Typically within 24 hours</span>
+              </div>
+            </div>
           </div>
 
-          <div className="space-y-3 pt-4">
-            {/* Direct Mailto Button */}
+          {/* Bottom Action Buttons */}
+          <div className="pl-4 sm:pl-5 pt-6 flex flex-col sm:flex-row gap-2.5 relative z-10">
             <a
               href={`mailto:${emailAddress}`}
-              className="w-full py-3 rounded-2xl bg-[#C23B58] text-[#FFFDF6] font-semibold text-xs text-center hover:bg-[#C23B58]/90 transition-all shadow-md shadow-[#C23B58]/20 flex items-center justify-center space-x-2"
+              className="flex-1 py-3 px-4 rounded-2xl bg-[#C23B58] text-[#FFFDF6] font-bold text-xs text-center hover:bg-[#C23B58]/90 transition-all shadow-md shadow-[#C23B58]/20 flex items-center justify-center space-x-1.5"
             >
-              <span>Email</span>
-              <span>({emailAddress})</span>
+              <span>Send Email</span>
+              <span>↗</span>
             </a>
 
-            {/* Copy Button */}
             <button
+              type="button"
               onClick={handleCopyEmail}
-              className="w-full py-2.5 rounded-2xl bg-[#FFFDF6] border border-[#4A2E2B]/15 text-xs font-bold text-[#4A2E2B] hover:bg-[#4A2E2B]/5 transition-all shadow-xs flex items-center justify-center space-x-2"
+              className="py-3 px-4 rounded-2xl bg-[#FFFDF6] border-2 border-[#4A2E2B]/15 text-[#4A2E2B] font-bold text-xs hover:border-[#C23B58] hover:text-[#C23B58] transition-all cursor-pointer flex items-center justify-center space-x-1.5"
             >
-              <span>{copied ? '✓ Copied to Clipboard!' : '📋 Copy Email Address'}</span>
+              <span>{copied ? '✓ Copied!' : 'Copy Address'}</span>
             </button>
           </div>
-        </div>
+        </article>
 
         {/* RIGHT CARD: Work Authorization & Profiles */}
-        <div className="bg-[#F7C8D1]/10 border border-[#4A2E2B]/10 rounded-3xl p-6 sm:p-8 space-y-6 flex flex-col justify-between">
-          {/* Work Authorization Info */}
-          <div className="space-y-3">
-            <div className="flex items-center justify-between">
-              <h3 className="text-sm font-mono font-bold uppercase tracking-wider text-[#C23B58]">
-                Work Authorization
-              </h3>
-              <span className="text-[10px] font-bold text-[#4A2E2B]/70 bg-[#FFFDF6] px-2 py-0.5 rounded-md border border-[#4A2E2B]/10">
-                Germany (EU)
+        <article className="relative bg-[#4A2E2B]/[0.12] backdrop-blur-[2px] border-2 border-[#4A2E2B]/20 rounded-3xl p-6 sm:p-7 shadow-sm hover:border-[#C23B58]/50 transition-colors flex flex-col justify-between">
+          {/* Left Red Notebook Margin Line */}
+          <div className="absolute top-0 bottom-0 left-6 sm:left-7 w-[1px] bg-[#C23B58]/30 pointer-events-none" />
+
+          <div className="pl-4 sm:pl-5 space-y-5 relative z-10">
+            {/* Card Header */}
+            <div className="flex items-center justify-between border-b border-[#4A2E2B]/15 pb-2">
+              <span className="text-[11px] font-mono font-bold text-[#C23B58] uppercase tracking-wider">
+                02 // HIRING & LOGISTICS
+              </span>
+              <span className="text-[10px] font-mono font-bold text-[#4A2E2B]/75 bg-[#FFFDF6]/90 px-2 py-0.5 rounded-md border border-[#4A2E2B]/15">
+                GERMANY (EU)
               </span>
             </div>
 
-            <div className="space-y-2 text-xs text-[#4A2E2B]/80 leading-relaxed">
+            {/* Title & Subtitle */}
+            <div>
+              <h3 className="font-extrabold text-[#4A2E2B] text-lg sm:text-xl leading-snug">
+                Work Authorization & Profiles
+              </h3>
+              <p className="text-sm font-semibold text-[#4A2E2B]/70 mt-0.5">
+                FAU Erlangen-Nürnberg • MSc Artificial Intelligence
+              </p>
+            </div>
+
+            {/* Structured Logistics List */}
+            <div className="space-y-2.5 text-sm text-[#4A2E2B]/90 leading-relaxed pt-1">
               <div className="flex items-start space-x-2">
                 <span className="text-[#C23B58] font-bold">•</span>
-                <span><strong>Status:</strong> Enrolled MSc Student at FAU Erlangen-Nürnberg.</span>
+                <span>
+                  <strong>Permit:</strong> Enrolled student visa allowing up to 20h/week during semesters (full-time during breaks).
+                </span>
               </div>
               <div className="flex items-start space-x-2">
                 <span className="text-[#C23B58] font-bold">•</span>
-                <span><strong>Allowance:</strong> EU Student Visa permit (up to 20h/week during semesters).</span>
+                <span>
+                  <strong>Location & Mode:</strong> Based in Erlangen / Nuremberg; open to on-site (Bavaria), hybrid, or remote roles.
+                </span>
               </div>
               <div className="flex items-start space-x-2">
                 <span className="text-[#C23B58] font-bold">•</span>
-                <span><strong>Location:</strong> Erlangen / Nuremberg area (Bavaria, Germany).</span>
+                <span>
+                  <strong>Availability:</strong> Immediate / Winter Semester 2026.
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Social Links */}
-          <div className="pt-4 border-t border-[#4A2E2B]/10 space-y-2">
-            <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#4A2E2B]/60">
-              Profiles
-            </p>
-            <div className="grid grid-cols-2 gap-3">
-              <a
-                href="https://linkedin.com/in/your-username"
-                target="_blank"
-                rel="noreferrer"
-                className="p-3 rounded-xl bg-[#FFFDF6] border border-[#4A2E2B]/10 text-xs font-bold text-[#4A2E2B] hover:border-[#C23B58]/40 hover:text-[#C23B58] transition-all flex items-center justify-between"
-              >
-                <span>LinkedIn</span>
-                <span className="text-[10px] font-mono">↗</span>
-              </a>
-              <a
-                href="https://github.com/your-username"
-                target="_blank"
-                rel="noreferrer"
-                className="p-3 rounded-xl bg-[#FFFDF6] border border-[#4A2E2B]/10 text-xs font-bold text-[#4A2E2B] hover:border-[#C23B58]/40 hover:text-[#C23B58] transition-all flex items-center justify-between"
-              >
-                <span>GitHub</span>
-                <span className="text-[10px] font-mono">↗</span>
-              </a>
+          {/* Social Profiles Footer */}
+          <div className="pl-4 sm:pl-5 pt-6 relative z-10">
+            <div className="pt-4 border-t border-dashed border-[#4A2E2B]/20 space-y-2.5">
+              <p className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#4A2E2B]/65">
+                Verified Profiles
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                <a
+                  href="https://linkedin.com/in/saugandhi"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="py-2.5 px-3.5 rounded-2xl bg-[#FFFDF6] border-2 border-[#4A2E2B]/15 text-xs font-bold text-[#4A2E2B] hover:border-[#C23B58] hover:text-[#C23B58] transition-all flex items-center justify-between"
+                >
+                  <span>LinkedIn</span>
+                  <span className="text-[11px] font-mono">↗</span>
+                </a>
+                <a
+                  href="https://github.com/saugandhii/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="py-2.5 px-3.5 rounded-2xl bg-[#FFFDF6] border-2 border-[#4A2E2B]/15 text-xs font-bold text-[#4A2E2B] hover:border-[#C23B58] hover:text-[#C23B58] transition-all flex items-center justify-between"
+                >
+                  <span>GitHub</span>
+                  <span className="text-[11px] font-mono">↗</span>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        </article>
 
       </div>
     </section>

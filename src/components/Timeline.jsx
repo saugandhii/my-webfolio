@@ -10,54 +10,43 @@ export default function Timeline() {
       title: 'MSc Artificial Intelligence',
       institution: 'FAU Erlangen-Nürnberg',
       location: 'Erlangen, Germany',
-      period: '2024 – Present',
+      period: 'Apr 2026 – Expected Mar 2028',
       status: 'In Progress',
       description: 'Focusing on Deep Learning, Computer Vision, and scalable AI systems. Engaging in advanced coursework and practical research.',
       tags: ['Deep Learning', 'Computer Vision', 'AI Systems']
     },
     {
       id: 2,
-      type: 'experience',
-      title: 'AI / Software Role', // Replace with your exact job title
-      institution: 'Company / Organization Name',
-      location: 'Location',
-      period: '9 Months', // e.g., '2023 – 2024'
-      status: 'Full-Time / Part-Time',
-      description: 'Engineered data pipelines, developed model components, and collaborated with cross-functional teams to deliver production-ready software.',
-      tags: ['Python', 'Machine Learning', 'Software Dev']
+      type: 'education',
+      title: 'MSc Artificial Intelligence in Industrial Applications',
+      institution: 'OTH Amberg-Weiden',
+      location: 'Amberg, Germany',
+      period: 'Mar 2025 – Feb 2026',
+      status: 'Completed',
+      description: 'Focusing on Deep Learning, Computer Vision, and scalable AI systems. Engaging in advanced coursework and practical research.',
+      tags: ['Deep Learning', 'Computer Vision', 'AI Systems']
     },
     {
       id: 3,
       type: 'experience',
-      title: 'Engineering Intern', // Replace with your exact internship title
-      institution: 'Company / Organization Name',
-      location: 'Location',
-      period: 'Internship', // e.g., '6 Months'
-      status: 'Internship',
+      title: 'Junior Data Analyst', // Replace with your exact internship title
+      institution: 'SBV Solutions Pvt. Ltd',
+      location: 'Hyderabad, India',
+      period: 'Jul 2024 – Mar 2025', // e.g., 'Jan 2023 – Jun 2023'
+      status: 'Full Time Position', // e.g., 'Internship' or 'Full Time Position'
       description: 'Gained hands-on technical experience, contributed to core software modules, and assisted in debugging computational tasks.',
       tags: ['Data Analysis', 'Git', 'Testing']
     },
     {
       id: 4,
       type: 'education',
-      title: 'Master\'s Studies (Partial / Completed Coursework)',
-      institution: 'University Name',
-      location: 'Location',
+      title: 'MSc Applied Statistics and Data Analytics',
+      institution: 'Amrita Vishwa Vidyapeetham',
+      location: 'Coimbatore, India',
       period: 'Previous Graduate Studies',
       status: 'Graduate Work',
       description: 'Completed specialized foundational graduate coursework in advanced computing and mathematical modeling before transitioning to FAU.',
       tags: ['Advanced Math', 'Computer Science']
-    },
-    {
-      id: 5,
-      type: 'education',
-      title: 'BSc in Computer Science / Related Field',
-      institution: 'University Name',
-      location: 'Location',
-      period: 'Completed Degree',
-      status: 'Graduated',
-      description: 'Graduated with a solid foundation in algorithms, software design patterns, database management, and discrete mathematics.',
-      tags: ['Algorithms', 'Data Structures', 'OOP']
     }
   ];
 
@@ -69,8 +58,8 @@ export default function Timeline() {
     <section id="timeline" className="space-y-6">
       {/* Header Badge */}
       <div className="flex items-center space-x-2">
-        <span className="text-xs font-mono font-bold tracking-wider text-[#C23B58] uppercase px-2.5 py-1 rounded-md bg-[#C23B58]/10 border border-[#C23B58]/20">
-          03 // TIMELINE
+        <span className="text-lg font-mono font-bold tracking-wider text-[#C23B58] uppercase px-2.5 py-1 rounded-md bg-[#C23B58]/10 border border-[#C23B58]/20">
+         TIMELINE
         </span>
       </div>
 
@@ -80,9 +69,6 @@ export default function Timeline() {
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#4A2E2B] leading-tight tracking-tight">
             Education & Experience
           </h2>
-          <p className="text-sm text-[#4A2E2B]/70 mt-1">
-            Academic degrees and industry roles listed in a chronological ladder.
-          </p>
         </div>
 
         {/* Filter Buttons */}

@@ -104,7 +104,7 @@ export default function App() {
           <p>© Built with React & Tailwind CSS</p>
           <div className="flex items-center space-x-6 text-[#4A2E2B]/80 font-medium">
             <a 
-              href="https://github.com/your-username" 
+              href="https://github.com/saugandhii" 
               target="_blank" 
               rel="noreferrer" 
               className="hover:text-[#C23B58] transition-colors"
@@ -112,7 +112,7 @@ export default function App() {
               GitHub
             </a>
             <a 
-              href="https://linkedin.com/in/your-username" 
+              href="https://linkedin.com/in/saugandhi" 
               target="_blank" 
               rel="noreferrer" 
               className="hover:text-[#C23B58] transition-colors"
