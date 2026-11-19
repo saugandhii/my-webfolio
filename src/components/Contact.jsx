@@ -13,31 +13,34 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-dotted-page py-10 px-4 sm:px-8 space-y-8 sm:space-y-10 animate-fade-in relative rounded-3xl border border-[#4A2E2B]/10 my-4"
+      className="bg-dotted-page py-8 sm:py-10 px-4 sm:px-8 space-y-6 sm:space-y-8 animate-fade-in relative rounded-3xl border border-[#4A2E2B]/10 my-4"
     >
       {/* Centered Header */}
-      <div className="text-center max-w-xl mx-auto space-y-2">
+      <div className="max-w-2xl mx-auto text-center space-y-1.5">
         <h2 className="text-2xl sm:text-3xl font-extrabold text-[#4A2E2B] leading-tight tracking-tight">
           Let&apos;s Get in Touch
         </h2>
+        <p className="text-xs sm:text-sm text-[#4A2E2B]/75">
+          Open to Werkstudent / HiWi research roles &amp; AI collaborations.
+        </p>
       </div>
 
-      {/* Main Grid: Translucent Kraft Brown 2-Card Layout */}
+      {/* Main Grid: Soft Rose Milk 2-Card Layout */}
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-2">
 
         {/* LEFT CARD: Direct Contact */}
-        <article className="relative bg-[#4A2E2B]/[0.12] backdrop-blur-[2px] border-2 border-[#4A2E2B]/20 rounded-3xl p-6 sm:p-7 shadow-sm hover:border-[#C23B58]/50 transition-colors flex flex-col justify-between">
+        <article className="relative bg-[#F7C8D1]/20 backdrop-blur-[2px] border-2 border-[#C23B58]/20 rounded-3xl p-6 sm:p-7 shadow-sm hover:border-[#C23B58]/50 transition-colors flex flex-col justify-between">
           {/* Left Red Notebook Margin Line */}
           <div className="absolute top-0 bottom-0 left-6 sm:left-7 w-[1px] bg-[#C23B58]/30 pointer-events-none" />
 
           <div className="pl-4 sm:pl-5 space-y-5 relative z-10">
             {/* Card Header */}
-            <div className="flex items-center justify-between border-b border-[#4A2E2B]/15 pb-2">
+            <div className="flex items-center justify-between border-b border-[#C23B58]/15 pb-2">
               <span className="text-[11px] font-mono font-bold text-[#C23B58] uppercase tracking-wider">
                 01 // DIRECT REACH-OUT
               </span>
               {/* Live Availability Pill */}
-              <div className="inline-flex items-center space-x-1.5 bg-[#FFFDF6]/85 border border-[#6DBE5A]/50 px-2.5 py-0.5 rounded-full">
+              <div className="inline-flex items-center space-x-1.5 bg-[#FFFDF6]/90 border border-[#6DBE5A]/50 px-2.5 py-0.5 rounded-full">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A2DD97] opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-[#6DBE5A]" />
@@ -59,13 +62,13 @@ export default function Contact() {
             </div>
 
             {/* Quick Metadata Block */}
-            <div className="pt-2 border-t border-dashed border-[#4A2E2B]/20 space-y-1.5 text-xs text-[#4A2E2B]/85">
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-[11px] text-[#4A2E2B]/65 uppercase">Email</span>
-                <span className="font-semibold text-[#4A2E2B] select-all">{emailAddress}</span>
+            <div className="pt-2 border-t border-dashed border-[#C23B58]/20 space-y-1.5 text-xs text-[#4A2E2B]/85">
+              <div className="flex items-center justify-between gap-2">
+                <span className="font-mono text-[11px] text-[#4A2E2B]/65 uppercase shrink-0">Email</span>
+                <span className="font-semibold text-[#4A2E2B] select-all truncate">{emailAddress}</span>
               </div>
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-[11px] text-[#4A2E2B]/65 uppercase">Response Time</span>
+              <div className="flex items-center justify-between gap-2">
+                <span className="font-mono text-[11px] text-[#4A2E2B]/65 uppercase shrink-0">Response Time</span>
                 <span className="font-medium text-[#4A2E2B]/90">Typically within 24 hours</span>
               </div>
             </div>
@@ -78,7 +81,6 @@ export default function Contact() {
               className="flex-1 py-3 px-4 rounded-2xl bg-[#C23B58] text-[#FFFDF6] font-bold text-xs text-center hover:bg-[#C23B58]/90 transition-all shadow-md shadow-[#C23B58]/20 flex items-center justify-center space-x-1.5"
             >
               <span>Send Email</span>
-              <span>↗</span>
             </a>
 
             <button
@@ -92,13 +94,13 @@ export default function Contact() {
         </article>
 
         {/* RIGHT CARD: Work Authorization & Profiles */}
-        <article className="relative bg-[#4A2E2B]/[0.12] backdrop-blur-[2px] border-2 border-[#4A2E2B]/20 rounded-3xl p-6 sm:p-7 shadow-sm hover:border-[#C23B58]/50 transition-colors flex flex-col justify-between">
+        <article className="relative bg-[#F7C8D1]/20 backdrop-blur-[2px] border-2 border-[#C23B58]/20 rounded-3xl p-6 sm:p-7 shadow-sm hover:border-[#C23B58]/50 transition-colors flex flex-col justify-between">
           {/* Left Red Notebook Margin Line */}
           <div className="absolute top-0 bottom-0 left-6 sm:left-7 w-[1px] bg-[#C23B58]/30 pointer-events-none" />
 
           <div className="pl-4 sm:pl-5 space-y-5 relative z-10">
             {/* Card Header */}
-            <div className="flex items-center justify-between border-b border-[#4A2E2B]/15 pb-2">
+            <div className="flex items-center justify-between border-b border-[#C23B58]/15 pb-2">
               <span className="text-[11px] font-mono font-bold text-[#C23B58] uppercase tracking-wider">
                 02 // HIRING & LOGISTICS
               </span>
@@ -110,7 +112,7 @@ export default function Contact() {
             {/* Title & Subtitle */}
             <div>
               <h3 className="font-extrabold text-[#4A2E2B] text-lg sm:text-xl leading-snug">
-                Work Authorization & Profiles
+                Work Authorization &amp; Profiles
               </h3>
               <p className="text-sm font-semibold text-[#4A2E2B]/70 mt-0.5">
                 FAU Erlangen-Nürnberg • MSc Artificial Intelligence
@@ -128,7 +130,7 @@ export default function Contact() {
               <div className="flex items-start space-x-2">
                 <span className="text-[#C23B58] font-bold">•</span>
                 <span>
-                  <strong>Location & Mode:</strong> Based in Erlangen / Nuremberg; open to on-site (Bavaria), hybrid, or remote roles.
+                  <strong>Location &amp; Mode:</strong> Based in Erlangen / Nuremberg; open to on-site (Bavaria), hybrid, or remote roles.
                 </span>
               </div>
               <div className="flex items-start space-x-2">
@@ -142,7 +144,7 @@ export default function Contact() {
 
           {/* Social Profiles Footer */}
           <div className="pl-4 sm:pl-5 pt-6 relative z-10">
-            <div className="pt-4 border-t border-dashed border-[#4A2E2B]/20 space-y-2.5">
+            <div className="pt-4 border-t border-dashed border-[#C23B58]/20 space-y-2.5">
               <p className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#4A2E2B]/65">
                 Verified Profiles
               </p>
